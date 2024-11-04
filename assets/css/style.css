@@ -64,8 +64,7 @@ h2 {
 }
 
 /* game library cards */
-#new-games .card, #fav-games .card{
-    
+#new-games .card, #fav-games .card {   
     border: none;
 }
 
