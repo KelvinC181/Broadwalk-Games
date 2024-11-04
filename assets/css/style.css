@@ -63,6 +63,17 @@ h2 {
     margin-bottom: 1.5rem;
 }
 
+/* new games */
+#new-games .card {
+    margin-bottom: 1.5rem;
+    border: none;
+}
+/* fav games */
+#fav-games .card {
+    margin-bottom: 1.5rem;
+    border: none;
+}
+
 /* media queries */
 
 /* medium devices (tablets, 768px and up) */
