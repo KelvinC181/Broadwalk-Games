@@ -90,6 +90,24 @@ h2 {
     margin-bottom: 1.5rem;
 }
 
+
+/* Events */
+
+#events .table {
+    /* events table font size small enough that 
+      the table doesn't overflow on xs screens. 
+      Size set back to 1rem in a media query 
+      for sm screens and up */
+    font-size: 0.7rem;
+}
+
+#events-table p {
+    background-color: var(--highlight-color);
+    color: white;
+    max-width: fit-content;
+    margin: auto;
+}
+
 /* game library cards */
 #new-games .card, #fav-games .card {   
     border: none;
@@ -131,6 +149,23 @@ h2 {
 }
 
 /* media queries */
+
+/* small devices (mobiles 576px and up) */
+@media screen and (min-width:768px) {
+    /* make all services cards the same height for consistency */
+    #services .card-body {
+        min-height: 191px;
+    }
+    /* events */
+    #events .table {
+        /* events table font size small enough that 
+          the table doesn't overflow on xs screens. 
+          Size set back to 1rem in a media query 
+          for sm screens and up */
+        font-size: 1rem;
+    }
+}
+
 
 /* medium devices (tablets, 768px and up) */
 @media screen and (min-width:768px) {
