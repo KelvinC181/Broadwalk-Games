@@ -191,7 +191,7 @@ h2 {
     }
 }
 
-/* xl devices (desktops, 1400px and up) */
+/* xxl devices (desktops, 1400px and up) */
 @media screen and (min-width:1400px) {
     /* make all services cards the same height for consistency */
     #services .card-body {
