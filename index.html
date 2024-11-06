@@ -213,39 +213,39 @@
                 <div id="events-table" class="col-12 col-xl-6">
                     <table class="table table-hover">
                         <thead>
-                          <tr>
-                            <th scope="col">Event</th>
-                            <th scope="col">Date</th>
-                            <th scope="col">Time</th>
-                            <th scope="col">Price</th>
-                          </tr>
+                            <tr>
+                                <th scope="col">Event</th>
+                                <th scope="col">Date</th>
+                                <th scope="col">Time</th>
+                                <th scope="col">Price</th>
+                            </tr>
                         </thead>
                         <tbody>
-                          <tr>
-                            <th scope="row">Dungeons & Dragons</th>
-                            <td>Tuesdays</td>
-                            <td>8pm - 11pm</td>
-                            <td>€25 for 6 sessions</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Retro Game Night</th>
-                            <td>Thursdays</td>
-                            <td>8pm - 11pm</td>
-                            <td>€5 per person*</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Tournaments</th>
-                            <td>Last Sunday of the month</td>
-                            <td>12pm - 7pm</td>
-                            <td>€10 per person</td>
-                          </tr>
+                            <tr>
+                                <th scope="row">Dungeons & Dragons</th>
+                                <td>Tuesdays</td>
+                                <td>8pm - 11pm</td>
+                                <td>€25 for 6 sessions</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Retro Game Night</th>
+                                <td>Thursdays</td>
+                                <td>8pm - 11pm</td>
+                                <td>€5 per person*</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Tournaments</th>
+                                <td>Last Sunday of the month</td>
+                                <td>12pm - 7pm</td>
+                                <td>€10 per person</td>
+                            </tr>
                         </tbody>
                     </table>
                     <p class="text-center px-3 py-1">*Get 20% off with valid student ID</p>
                 </div>
 
                 <div class="col-12 text-center mt-4">
-                <a class="btn custom-button-outline mb-4" href="booking.html">Book now</a>
+                    <a class="btn custom-button-outline mb-4" href="booking.html">Book now</a>
                 </div>
             </div>
         </section>
@@ -285,34 +285,34 @@
                     <h3 class="sub-heading-color">Opening times</h3>
                     <table class="table table-dark">
                         <thead>
-                          <tr>
-                            <th scope="col">Day</th>
-                            <th scope="col">Open</th>
-                            <th scope="col">Close</th>
-                          </tr>
+                            <tr>
+                                <th scope="col">Day</th>
+                                <th scope="col">Open</th>
+                                <th scope="col">Close</th>
+                            </tr>
                         </thead>
                         <tbody>
-                          <tr>
-                            <th scope="row">Mon</th>
-                            <td colspan="2">closed</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Tue - Thur</th>
-                            <td>11am</td>
-                            <td>11pm</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Fri - Sat</th>
-                            <td>11am</td>
-                            <td>12am</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">Sun</th>
-                            <td>12pm</td>
-                            <td>7pm</td>
-                          </tr>
+                            <tr>
+                                <th scope="row">Mon</th>
+                                <td colspan="2">closed</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Tue - Thur</th>
+                                <td>11am</td>
+                                <td>11pm</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Fri - Sat</th>
+                                <td>11am</td>
+                                <td>12am</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Sun</th>
+                                <td>12pm</td>
+                                <td>7pm</td>
+                            </tr>
                         </tbody>
-                      </table>
+                    </table>
                 </div>
             </div>
         </div>
@@ -324,6 +324,27 @@
     </script>
     <!-- font awesome script -->
     <script src="https://kit.fontawesome.com/67187a987e.js" crossorigin="anonymous"></script>
+    <!-- JavaScript code to ensure the Bootstrap mobile navbar collapses when navigating to in-page links -->
+    <script>
+        document
+            .querySelectorAll(".navbar-collapse .nav-link")
+            .forEach((link) => {
+                link.addEventListener("click", function (e) {
+                    let section = document.querySelector(e.target.getAttribute("href"));
+                    if (section) {
+                        e.preventDefault(); // Prevent default anchor click behavior
+                        let navbarHeight = document.querySelector(".navbar-toggler").offsetHeight;
+                        window.scroll({
+                            top: section.offsetTop - navbarHeight, // Adjust for navbar height
+                            behavior: "smooth",
+                        });
+                        document
+                            .querySelector(".navbar-collapse")
+                            .classList.remove("show"); // Collapse navbar
+                    }
+                });
+            });
+    </script>
 </body>
 
 </html>
